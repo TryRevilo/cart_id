@@ -16,7 +16,8 @@
 	PAGE LAYOUT
 *************************************** */
 /***** DEFAULT LAYOUT ******/
-<?php // the width is on the page rather than topbar to handle small viewports ?>
+<?php 
+// the width is on the page rather than topbar to handle small viewports ?>
 .elgg-page-default {
 	min-width: 800px;
 }

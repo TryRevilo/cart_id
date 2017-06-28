@@ -67,43 +67,6 @@ $all_rooms = elgg_view('output/url', $params_all_rooms);
 
 	<?= $messages; ?>
 
-	<!-- Rev custom Head start -->
-	<div class="custom-head">
-		<div class="bg-primary custom-site-header"><?= $custom_site_header; ?></div>
-		<!-- End Rev custom crumbs -->
-		<div class="row">
-			<div class="fixed-menu-filter">
-				<div class="container-fluid">
-					<div class="row">
-						<div class="col-md-2"></div>
-						<div class="col-md-10">
-							<div class="filter-wrapper">
-								<div class="filter-float-left filter-float-left-icon">
-									<span><?= elgg_view_icon('angle-double-left'); ?></span>
-									<span><?= elgg_view_icon('angle-double-right'); ?></span>
-								</div>
-								
-								<div class="filter-float-left">
-									<?php
-									if (isset($vars['filter'])) {
-										echo $vars['filter'];
-									}
-									
-									echo elgg_view_menu('filter', array('sort_by' => 'priority', 'class' => 'elgg-menu-hz'));
-									?>
-								</div>
-
-								<?= $all_rooms; ?>
-								
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- End Rev custom Head -->
-
 	<!-- main content start-->
 	<div class="cast-main-content">
 		<div class="container-fluid">
@@ -111,7 +74,7 @@ $all_rooms = elgg_view('output/url', $params_all_rooms);
 				<div class="col-md-2">
 					<div class="set-site-menues-container">
 						<div class="set-site-menues-wrapper">
-							<div><?= elgg_view('campus_rooms_theme/sidebar/owner_profile'); ?>
+							<div><?= elgg_view('page/elements/sidebar'); ?>
 							</div>
 						</div>
 					</div>
