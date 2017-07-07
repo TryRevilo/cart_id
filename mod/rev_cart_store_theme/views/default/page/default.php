@@ -1,3 +1,9 @@
+<style type="text/css">
+	.container {
+		border-top: 2px solid #737368;
+	}
+</style>
+
 <?php
 
 if (elgg_get_context() == 'admin') {

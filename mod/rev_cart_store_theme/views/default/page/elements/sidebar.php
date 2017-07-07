@@ -39,22 +39,6 @@
 		padding: 2px 4px;
 	}
 
-	.items-listing-options {
-		padding: 2px 0;
-		width: 146px;
-		display: table;
-		margin: 0 auto;
-		margin: 8px  auto 22px auto;
-	}
-
-	.listing-options-btn {
-		border-radius: 0 !important;
-	}
-
-	#menu-outer {
-		margin-bottom: 8px;
-	}
-
 	.table {
 		text-align: center;
 		display: table;   /* Allow the centering to work */
@@ -70,18 +54,17 @@
 
 	@media screen and (min-width: 600px) {
 		.nav li {
-			min-width: 120px;
+			min-width: 100%;
 			border-bottom: none;
 		}
 
 		/* Option 1 - Display Inline */
 		.nav li {
 			display: inline-block;
-			margin-right: -4px;
 		}
 		.nav li a:hover {
 			color: #444;
-			background-color: #FFF;
+			background-color: #DEE4C3;
 		}
 
   /* Options 2 - Float
@@ -99,9 +82,46 @@
   */
 }
 
+.add-new-item {
+	color: #325F87;
+	font-size: 32px;
+	text-align: center;
+	margin-top: 4px;
+	margin-bottom: 22px;
+}
+
+.items-listing-options {
+	padding: 2px 0;
+	width: 146px;
+	display: table;
+	margin: 0 auto;
+	margin: 8px  auto 22px auto;
+}
+
+.listing-options-btn {
+	background-color: #FFF !important;
+	border-radius: 0 !important;
+}
+
+.btn-group>.btn+.dropdown-toggle {
+	padding-right: 8px;
+	padding-left: 8px;
+	min-height: 34.67px;
+}
+
+.btn-primary-outline {
+	background-color: transparent;
+	border-color: #CCC !important;
+}
+
+button:focus {
+	outline: 0 !important;
+}
+
+/** ABOUT SITE NAV **/
+
 .nav ul {
 	list-style: none;
-	background-color: #444;
 	text-align: center;
 	padding: 0;
 	margin: 0;
@@ -111,12 +131,12 @@
 	font-family: 'Oswald', sans-serif;
 	line-height: 40px;
 	height: 40px;
-	border-bottom: 1px solid #888;
+	border-bottom: 1px solid #DEE4C3;
 }
 
 .nav a {
 	text-decoration: none;
-	color: #fff;
+	color: #444;
 	display: block;
 	transition: .3s background-color;
 }
@@ -126,17 +146,52 @@
 }
 
 .nav a.active {
-	background-color: #fff;
 	color: #444;
 	cursor: default;
+	background-color: #fff;
+	border: none;
 }
 
+/** END ABOUT SITE NAV **/
+
+</style>
+
+<!-- HID ITEMS FOOT -->
+
+<style type="text/css">
+	/* For mobile phones: */
+	.header-top {
+		display:block;
+	}
+	.header-bottom {
+		display:none;
+	}
+	@media only screen and (min-width: 600px) {
+		/* For tablets: */
+		.header-top {
+			display:block;
+		}
+		.header-bottom {
+			display:none;
+		}
+	}
+	@media only screen and (min-width: 768px) {
+		/* For desktop: */
+		.header-top {
+			display:none;
+		}
+		.header-bottom {
+			display:block;
+		}
+	}
+	
 </style>
 
 <div class="left-nav-main-nav">
 	<div class="site-logo"><span class="glyphicon glyphicon-th" aria-hidden="true"></span></div>
 	<div class="site-name">
-		<span class="site-name-main-txt">CART</span></br>
+		<span class="site-name-main-txt">CART</span>
+		<br>
 		<span class="site-name-desc">- Shopping ART -</span>
 	</div>
 
@@ -148,37 +203,41 @@
 				<li><span class="glyphicon glyphicon-shopping-cart quick-access-personals" aria-hidden="true"></li>
 				<li><span class="glyphicon glyphicon-search quick-access-personals" aria-hidden="true"></li>
 				<li>
-					<span class="glyphicon glyphicon-share quick-access-personals" aria-hidden="true">
-					</li>
-				</ul>
-			</div>
-		</div>
-
-		<div class="items-listing-options">
-			<div class="row">
-				<!-- Split button -->
-				<div class="btn-group">
-					<button type="button" class="btn btn-info listing-options-btn">Listing options</button>
-					<button type="button" class="btn btn-info dropdown-toggle listing-options-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						<span class="caret"></span>
-						<span class="sr-only">Toggle Dropdown</span>
-					</button>
-					<ul class="dropdown-menu">
-						<li><a href="#">Action</a></li>
-						<li><a href="#">Another action</a></li>
-						<li><a href="#">Something else here</a></li>
-						<li role="separator" class="divider"></li>
-						<li><a href="#">Separated link</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-
-		<div class="nav">
-			<ul>
-				<li class="tutorials"><a class="active" href="#">About CART</a></li>
-				<li class="news"><a href="#">Blog</a></li>
-				<li class="contact"><a href="#">Contact</a></li>
+					<span class="glyphicon glyphicon-share quick-access-personals" aria-hidden="true"></span>
+				</li>
 			</ul>
 		</div>
 	</div>
+
+	<div class="add-new-item">
+		<span class="glyphicon glyphicon-plus" aria-hidden="true"></li></span>
+	</div>
+
+	<div class="items-listing-options">
+		<div class="row">
+			<!-- Split button -->
+			<div class="btn-group">
+				<button type="button" class="btn btn-primary-outline listing-options-btn">Listing options</button>
+				<button type="button" class="btn btn-primary-outline dropdown-toggle listing-options-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<span class="caret"></span>
+					<span class="sr-only">Toggle Dropdown</span>
+				</button>
+				<ul class="dropdown-menu">
+					<li><a href="#">Action</a></li>
+					<li><a href="#">Another action</a></li>
+					<li><a href="#">Something else here</a></li>
+					<li role="separator" class="divider"></li>
+					<li><a href="#">Separated link</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="nav header-bottom">
+		<ul>
+			<li class="tutorials"><a class="active" href="#">About CART</a></li>
+			<li class="news"><a href="#">Blog</a></li>
+			<li class="contact"><a href="#">Contact</a></li>
+		</ul>
+	</div>
+</div>
